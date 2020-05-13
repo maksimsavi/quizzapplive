@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Cities quizz</title>
+</head>
+<body>
+<main>
+<section class="intro">
+<header><h1>Cities Quiz</h1></header>
+<button type="button" class="startButton">Start Quizz</button>
+</section>
+<section class="quizz">
+    <form>
+        <fieldset>
+            <legend>(current?)/(array.length): What is the capital of ___?</legend>
+            <div><input type="radio" id="Paris" name="city" value="Paris" required>
+            <label for="Paris">(answer1)</label></div>
+            <div><input type="radio" id="Bordeaux" name="city" value="Bordeaux">
+            <label for="Bordeaux">(answer2)</label></div>
+            <div><input type="radio" id="Nantes" name="city" value="Nantes">
+            <label for="Nantes">(answer3)</label></div>
+            <input type="submit" value="Check">
+        </fieldset>    
+        <p>Correct: __, Incorrect: __</p>
+        <p></p>
+    </form>
+</section>
+<section class="quizzIncorrect">
+    <h2>Oopsies! Capital of __ is __</h2>
+    <button type="button" class="nextButton">Next</button>
+</section>
+<section class="quizzEnd">
+    <h2>The End!</h2>
+    <p>Your score is: __</p>
+    <button type="button" class="startButton">Try again?</button>
+</section>
+</main>
+</body>
+</html>

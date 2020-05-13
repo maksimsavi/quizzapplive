@@ -1,0 +1,28 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 200%;
+}
+/*take out this section code later. border is only for references*/
+section {
+    
+    border-bottom: 2px solid black;
+}
+.intro {
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.quizz {
+    margin-top: 15%;
+}
+.startButton {
+    
+}
+.quizzIncorrect {
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+}
