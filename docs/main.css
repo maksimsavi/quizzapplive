@@ -1,28 +1,165 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+    background-color: #2f2fa2;
+    color: white;
+    font-family: 'Playfair Display', serif;
+}
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 200%;
-}
-/*take out this section code later. border is only for references*/
-section {
     
-    border-bottom: 2px solid black;
 }
-.intro {
-    margin-top: 15%;
+fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+fieldset div {
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+div.answerOption {
+    padding: 10px;
+    font-size: 25px;
+    margin-bottom: 10px;
+    background-color: #242582;
+    border: 2px solid #242582;
+    display: flex;
+    align-items: center;
+}
+div.inputholder {
+    width: 250px;
+}
+section {
+    margin-top: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+p {
+    font-size: 45px;
+    text-align: center;
+}
+input[type="submit"], button {
+    width: 250px;
+    height: 50px;
+    font-size: 25px;
+    border: 2px solid #F64C72;
+    border-radius: 5px;
+    background-color: #F64C72;
+    color: white;
+    transition: 0.3s;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+input[type="submit"]:hover, button:hover {
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: white;
+    color: #F64C72;
+}
+input[type="radio"] {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 50px;
+    
+}
+.scorePar {
+    font-size: 20px;
+    margin: 30px;
+    color: grey;
+}
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+#endTitle {
+    margin: 0;
+}
+.intro {
+    
+    display: flex;
+    flex-direction: column;
+    
+}
 .quizz {
-    margin-top: 15%;
+    
 }
 .startButton {
     
 }
 .quizzIncorrect {
-    margin-top: 15%;
-    display: flex;
-    flex-direction: column;
+    
 }
+.quizzEnd {
+    justify-content: space-around;
+    display: block;
+    text-align: center;
+}
+
+ {
+    margin: 10px;
+  }
+  
