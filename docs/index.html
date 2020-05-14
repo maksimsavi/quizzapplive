@@ -10,10 +10,11 @@
 <main>
 <section class="intro">
 <header><h1>Cities Quiz</h1></header>
-<button type="button" class="startButton">Start Quizz</button>
+<button type="button" id="startButton">Start Quizz</button>
 </section>
+<!--
 <section class="quizz">
-    <form>
+    <form id="js-questions">
         <fieldset>
             <legend>(current?)/(array.length): What is the capital of ___?</legend>
             <div><input type="radio" id="Paris" name="city" value="Paris" required>
@@ -28,6 +29,7 @@
         <p></p>
     </form>
 </section>
+-->
 <section class="quizzIncorrect">
     <h2>Oopsies! Capital of __ is __</h2>
     <button type="button" class="nextButton">Next</button>
@@ -38,5 +40,7 @@
     <button type="button" class="startButton">Try again?</button>
 </section>
 </main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
