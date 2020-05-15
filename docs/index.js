@@ -49,9 +49,7 @@ function startQuizz() {
 function evaluateAnswer() {
     $( "#quizzForm" ).submit(function( event ) {
         event.preventDefault();
-        
         userInput = $("input[name='city']:checked").val();
-        function ifElseStatement() {
             if (userInput === dataArray[counterObject.arrayIndex].correct) {
             console.log('correct');
             counterObject.correctCount++;
@@ -61,8 +59,8 @@ function evaluateAnswer() {
             counterObject.incorrectCount++;
             $(showIncorrect());
            }
-        };
-        ifElseStatement();
+      //  };
+       // ifElseStatement();
         
          
       });
@@ -83,9 +81,6 @@ function showIncorrect(){
     `);
     counterObject.globalScoreCount++;
     counterObject.arrayIndex++;
-    $("#nextButton").click(function() {
-        renderQuestion();
-      });
     
 }
 function showCorrect(){
@@ -98,10 +93,14 @@ function showCorrect(){
     `);
     counterObject.globalScoreCount++;
     counterObject.arrayIndex++;
-    $("#nextButton").click(function() {
+ }
+function reactToNextButtonClick() {
+    $('main').on( "click","#nextButton",(function() {
+        
         renderQuestion();
-      });
-    
+      }));
+
+      console.log('react to next ran');
 }
 function renderQuestion() {
     //if dataArray.length === dataArray.length+1, then load final page??
@@ -120,10 +119,10 @@ function renderQuestion() {
         <fieldset>
             <legend><h2>${counterObject.globalScoreCount}/${dataArray.length}: What is the capital of 
             ${dataArray[counterObject.arrayIndex].country}?</h2></legend>
-            <label>
-            <div class="answerOption"><input class="design" type="radio" id="${dataArray[counterObject.arrayIndex].choices[0]}" name="city" value="${dataArray[counterObject.arrayIndex].choices[0]}">
-            <label for="${dataArray[counterObject.arrayIndex].choices[0]}" class="dark text design">${dataArray[counterObject.arrayIndex].choices[0]}</div></label>
-
+            
+            <label for="${dataArray[counterObject.arrayIndex].choices[0]}">
+            <div class="answerOption"><input class="design" type="radio" id="${dataArray[counterObject.arrayIndex].choices[0]}" name="city" value="${dataArray[counterObject.arrayIndex].choices[0]}" required>
+            ${dataArray[counterObject.arrayIndex].choices[0]}</div></label>
             
             <label for="${dataArray[counterObject.arrayIndex].choices[1]}">
             <div class="answerOption"><input class="design" type="radio" id="${dataArray[counterObject.arrayIndex].choices[1]}" name="city" value="${dataArray[counterObject.arrayIndex].choices[1]}" required>
@@ -140,7 +139,6 @@ function renderQuestion() {
     `);
     evaluateAnswer();}
 }
-
 function renderEnd() {
     //this will render the final page, and listen for the 'try again button' which 
     //will just run -startQuizz()-
@@ -151,15 +149,19 @@ function renderEnd() {
     <p class="scorePar">Correct: ${counterObject.correctCount}, Incorrect: ${counterObject.incorrectCount}</p>
     </section>
     `);
-        
-    $("#tryAgainButton").click(function() {
-        
+}
+function reactToTryAgainButtonClick() {
+    $('main').on( "click","#tryAgainButton",(function() {
         $(startQuizz());
         $(renderQuestion);
-      });
+      }));
+
+      console.log('react to try again ran');
 }
 function runQuizApp(){
-    startQuizz();   
-   
+    startQuizz(); 
+    reactToNextButtonClick();  
+    reactToTryAgainButtonClick();
+    
 }
 $(runQuizApp);
