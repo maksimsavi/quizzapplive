@@ -45,8 +45,7 @@ function evaluateAnswer() {
         console.log('nah b');
         counterObject.incorrectCount++;
         $(showIncorrect());
-       }
-    
+       }  
 }
 //handles question answer (collects it, and runs evaluation function)
 function collectAnswer() {
@@ -58,7 +57,6 @@ function collectAnswer() {
 }
 //renders incorrect screen, updates score
 function showIncorrect(){
-    
     $('main').html(`
     <section class="quizzIncorrect fadeInAnimation">
     <h2>Oops! Capital of ${dataArray[counterObject.arrayIndex].country} is ${dataArray[counterObject.arrayIndex].correct}.</h2>
@@ -66,11 +64,9 @@ function showIncorrect(){
     `);
     counterObject.globalScoreCount++;
     counterObject.arrayIndex++;
-    
 }
 //renders correct screen, updates score
 function showCorrect(){
-    //shows correct screens, on 'next' click runs renderQuestion
     $('main').html(`
     <section class="quizzCorrect fadeInAnimation">
     <h2>Yes! Capital of ${dataArray[counterObject.arrayIndex].country} is indeed 
@@ -93,10 +89,9 @@ function checkWhatToLoad() {
     }
     else {
         renderQuestion();
-}
+    }
 }
 //renders a question
-
 function renderQuestion() {
     $('main').html(`
     <section class="quizz fadeInAnimation">
@@ -118,11 +113,9 @@ function renderQuestion() {
             <div class="inputholder"><input id="checkButton" type="submit" value="check"></div>
             </fieldset>    
         <p class="scorePar">Correct: ${counterObject.correctCount}, Incorrect: ${counterObject.incorrectCount}</p>
-        
     </form>
 </section>
     `);
-    
 }
 //renders final page
 function renderEnd() {
