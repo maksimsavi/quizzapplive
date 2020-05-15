@@ -72,7 +72,7 @@ function showIncorrect(){
 function showCorrect(){
     //shows correct screens, on 'next' click runs renderQuestion
     $('main').html(`
-    <section class="quizzIncorrect fadeInAnimation">
+    <section class="quizzCorrect fadeInAnimation">
     <h2>Yes! Capital of ${dataArray[counterObject.arrayIndex].country} is indeed 
     ${dataArray[counterObject.arrayIndex].correct}.</h2>
     <button type="button" id="nextButton">Next</button>
